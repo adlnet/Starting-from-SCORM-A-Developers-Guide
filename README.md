@@ -1,4 +1,12 @@
 # Starting from SCORM: A Developer’s Guide
+  
+  
+  
+  >  This project was first presented at the ADL xAPI Bootcamp in Alexandria, VA in 2015. It is now being maintained here to allow others to access this workshop. If you are interested in try the code tutorial, refer to the steps in the [Instructions] (https://github.com/adlnet/Starting-from-SCORM-A-Developers-Guide/blob/master/Instructions.md).
+
+
+
+
 
 Building blocks made simpler. 
 
