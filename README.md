@@ -2,19 +2,9 @@
   
   
   
-  >  This project was first presented at the ADL xAPI Bootcamp in Alexandria, VA in 2015. It is now being maintained here to allow others to access this workshop. If you are interested in try the code tutorial, refer to the steps in the [Instructions] (https://github.com/adlnet/Starting-from-SCORM-A-Developers-Guide/blob/master/Instructions.md).
+This project was first presented at the ADL xAPI Bootcamp in Alexandria, VA in 2015. It is now being maintained here to allow others to access this workshop. If you are interested in try the code tutorial, refer to the steps in the [Instructions] (https://github.com/adlnet/Starting-from-SCORM-A-Developers-Guide/blob/master/Instructions.md).
 
-
-
-
-
-Building blocks made simpler. 
-
-#### Date/Time
-Tuesday, July 14, 2015 | 1115 - 1230 ET
-
-#### Track
-Developer (Track 1)
+Instructions in the instructions [file](https://github.com/adlnet/Starting-from-SCORM-A-Developers-Guide/blob/master/Instructions.md)
 
 #### Facilitator(s)
 [Tom Creighton](https://www.linkedin.com/pub/tom-creighton/16/9b7/14), [Jono Poltrack](https://www.linkedin.com/pub/jonathan-poltrack/5/872/321) 
@@ -37,5 +27,18 @@ Participants should come with a laptop and a code editor.  If you are installing
 
 To (optionally) test your course along the way in an LMS, please come with an account to an existing SCORM Conformant LMS (3rd or 4th Ed) account.  If you do not have an existing LMS account, consider using a hosted solution: [SCORM Cloud](http://cloud.scorm.com).  More advanced users may install a local LMS: [ADL Sample RTE](http://www.adlnet.org/resources/scorm-2004-4th-edition-adl-sample-rte-version-1_1_1/index.html).  
 
-#### Step by Step
-The step by step instructions and resource listing is available in the [Instructions.md file](https://github.com/adlnet/xapi-bootcamp-2015/blob/master/Day%20One%20workshops/Starting%20from%20SCORM%20-%20A%20Developer's%20Guide/Instructions.md)
+## License
+   Copyright &copy;2016 Advanced Distributed Learning
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+   
