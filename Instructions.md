@@ -100,7 +100,7 @@ The demonstration requires initialization of xAPI-required configuration data in
 
 *Initializing Data Using imsmanifest.xml*
 
-In the imsmanifest.xml file, identify <item></item> tags associated with SCOs that are to be converted.  Create a json object like the example below that includes configuration values of the items in the list above.  Include this object in the <adlcp:dataFromLMS></adlcp:dataFromLMS> element for the items that reference SCOs.  The dataFromLMS tag value is used to initialize the cmi.launch_data SCORM Data Model element and can be used at run-time to set the necessary xAPI configuration values.  The following is an example JSON configuration object:
+In the imsmanifest.xml file, identify `<item>` tags associated with SCOs that are to be converted.  Create a json object like the example below that includes configuration values of the items in the list above.  Include this object in the `<adlcp:dataFromLMS>` element for the items that reference SCOs.  The `<adlcp:dataFromLMS>` tag value is used to initialize the `cmi.launch_data` SCORM Data Model element and can be used at run-time to set the necessary xAPI configuration values.  The following is an example JSON configuration object:
 
 ``` json
     {
@@ -128,7 +128,7 @@ In the imsmanifest.xml file, identify <item></item> tags associated with SCOs th
    } 
 ```
 
-Remember that the "activityId" should change each time this object is used to identify a unique activity.  For the purposes of the Roses course, the following list provides the activity IDs that should be used for this exercise:
+Remember that the `activityId` should change each time this object is used to identify a unique activity.  For the purposes of the Roses course, the following list provides the activity IDs that should be used for this exercise:
 
    * "http://adlnet.gov/courses/roses/q1"
    * "http://adlnet.gov/courses/roses/q2"
@@ -144,9 +144,9 @@ Remember that the "activityId" should change each time this object is used to id
    * "http://adlnet.gov/courses/roses/styles"
    * "http://adlnet.gov/courses/roses/what"
 
-For information on the imsmanifest.xml file, <item></item> tags and <adlcp:dataFromLMS></adlcp:dataFromLMS>, see the [SCORM on ADLNet.gov](https://www.adlnet.gov/adl-research/scorm/). 
+For information on the imsmanifest.xml file, `<item>` tags and `<adlcp:dataFromLMS>`, see the [SCORM on ADLNet.gov](https://www.adlnet.gov/adl-research/scorm/). 
 
-*If you already use <adlcp:dataFromLMS></adlcp:dataFromLMS> and the cmi.launch_data element, please be sure to modify this approach to handle your existing data AND the JSON object*
+*If you already use `<adlcp:dataFromLMS>` and the `cmi.launch_data` element, please be sure to modify this approach to handle your existing data AND the JSON object*
 
 In addition, In order to distinguish this course from the original, change the course title in the imsmanifest.xml file at the root of the course.  The code snippet below illustrates the required change:
 
