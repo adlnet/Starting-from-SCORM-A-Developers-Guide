@@ -19,14 +19,14 @@ This example uses the [xAPI SCORM Profile](https://github.com/adlnet/xAPI-SCORM-
 In this step, we’ll examine the SCORM course to be used during this workshop and look at several resources that will be used in this demonstration.
 
 Get the required resources:
-   * [SCORM 2004 APIWrapper.js](https://raw.githubusercontent.com/adlnet/SCORM-to-xAPI-Wrapper/master/SCORM2004/APIWrapper.js) - The new SCORM Wrapper containing integration points for the conversion code
-   * [SCORMToXAPIFunctions.js](https://raw.githubusercontent.com/adlnet/xapi-bootcamp-2015/master/Day%20One%20workshops/Starting%20from%20SCORM%20-%20A%20Developer's%20Guide/Resources/SCORMToXAPIFunctions.js) - Contains all of the code required to map SCORM data model elements to xAPI statements
+   * [(SCORM 2004) APIWrapper.js](https://raw.githubusercontent.com/adlnet/SCORM-to-xAPI-Wrapper/master/SCORM2004/APIWrapper.js) - The new SCORM Wrapper containing integration points for the conversion code
+   * [SCORMToXAPIFunctions.js](https://github.com/adlnet/SCORM-to-xAPI-Wrapper/blob/master/SCORMToXAPIFunctions.js) - Contains all of the code required to map SCORM data model elements to xAPI statements
    * [xapiwrapper.min.js](https://raw.githubusercontent.com/adlnet/xAPIWrapper/master/dist/xapiwrapper.min.js) - Obscures complexities of the xAPI and includes the ADL core verbs
-   * [Step 1 - RosesOriginal.zip](https://github.com/adlnet/xapi-bootcamp-2015/blob/master/Day%20One%20workshops/Starting%20from%20SCORM%20-%20A%20Developer's%20Guide/Steps/Step%201%20-%20RosesOriginal.zip?raw=true)
-   * [Step 2 - ReplacingAndAddingFiles.zip](https://github.com/adlnet/xapi-bootcamp-2015/blob/master/Day%20One%20workshops/Starting%20from%20SCORM%20-%20A%20Developer's%20Guide/Steps/Step%202%20-%20ReplacingAndAddingFiles.zip?raw=true)
-   * [Step 3 - UpdateSCOs.zip](https://github.com/adlnet/xapi-bootcamp-2015/blob/master/Day%20One%20workshops/Starting%20from%20SCORM%20-%20A%20Developer's%20Guide/Steps/Step%203%20-%20UpdateSCOs.zip?raw=true)
-   * [Step 4 - InitializingData.zip](https://github.com/adlnet/xapi-bootcamp-2015/blob/master/Day%20One%20workshops/Starting%20from%20SCORM%20-%20A%20Developer's%20Guide/Steps/Step%204%20-%20SetActivityIDs.zip?raw=true)
-   * [Step 5 - Extra Credit.zip](https://github.com/adlnet/xapi-bootcamp-2015/blob/master/Day%20One%20workshops/Starting%20from%20SCORM%20-%20A%20Developer's%20Guide/Steps/Step%206%20-%20Extra%20Credit.zip?raw=true)
+   * [Step 1 - RosesOriginal.zip](https://github.com/adlnet/Starting-from-SCORM-A-Developers-Guide/blob/master/Steps/Step%201%20-%20RosesOriginal.zip?raw=true)
+   * [Step 2 - ReplacingAndAddingFiles.zip](https://github.com/adlnet/Starting-from-SCORM-A-Developers-Guide/blob/master/Steps/Step%202%20-%20ReplacingAndAddingFiles.zip?raw=true)
+   * [Step 3 - UpdateSCOs.zip](https://github.com/adlnet/Starting-from-SCORM-A-Developers-Guide/blob/master/Steps/Step%203%20-%20UpdateSCOs.zip?raw=true)
+   * [Step 4 - InitializingData.zip](https://github.com/adlnet/Starting-from-SCORM-A-Developers-Guide/blob/master/Steps/Step%204%20-%20InitializingData.zip?raw=true)
+   * [Step 5 - ExtraCredit.zip](https://github.com/adlnet/Starting-from-SCORM-A-Developers-Guide/blob/master/Steps/Step%205%20-%20ExtraCredit.zip?raw=true)
 
 Extract “Step 1 - RosesOriginal.zip” to a local directory on your computer.  This will be our starting place for the hands-on workshop.  
 
