@@ -8,6 +8,8 @@ This session includes an overview of the SCORM to TLA Roadmap as well as a hands
    2. general information about the xAPI SCORM Profile and its intended use
    3. what the SCORM-to-xAPI wrapper file is, and how to use it to convert SCOs to xAPI-enabled SCOs
    4. examples of new functionality enabled by applying xAPI to a traditional SCORM course
+   
+This example uses the [xAPI SCORM Profile](https://github.com/adlnet/xAPI-SCORM-Profile/blob/master/xapi-scorm-profile.md) for xAPI vocabulary and some minor behaviors.  If you are following these steps on your own, we strongly recommend that you read the [xAPI SCORM Profile](https://github.com/adlnet/xAPI-SCORM-Profile/blob/master/xapi-scorm-profile.md) (then read it again), before continuing.
 
 ## Step by Step Instructions
 
@@ -23,55 +25,51 @@ Get the required resources:
    * [Step 1 - RosesOriginal.zip](https://github.com/adlnet/xapi-bootcamp-2015/blob/master/Day%20One%20workshops/Starting%20from%20SCORM%20-%20A%20Developer's%20Guide/Steps/Step%201%20-%20RosesOriginal.zip?raw=true)
    * [Step 2 - ReplacingAndAddingFiles.zip](https://github.com/adlnet/xapi-bootcamp-2015/blob/master/Day%20One%20workshops/Starting%20from%20SCORM%20-%20A%20Developer's%20Guide/Steps/Step%202%20-%20ReplacingAndAddingFiles.zip?raw=true)
    * [Step 3 - UpdateSCOs.zip](https://github.com/adlnet/xapi-bootcamp-2015/blob/master/Day%20One%20workshops/Starting%20from%20SCORM%20-%20A%20Developer's%20Guide/Steps/Step%203%20-%20UpdateSCOs.zip?raw=true)
-   * [Step 4 - SetActivityIDs.zip](https://github.com/adlnet/xapi-bootcamp-2015/blob/master/Day%20One%20workshops/Starting%20from%20SCORM%20-%20A%20Developer's%20Guide/Steps/Step%204%20-%20SetActivityIDs.zip?raw=true)
-   * [Step 5 - ConfigureLRSInfo.zip](https://github.com/adlnet/xapi-bootcamp-2015/blob/master/Day%20One%20workshops/Starting%20from%20SCORM%20-%20A%20Developer's%20Guide/Steps/Step%205%20-%20ConfigureLRSInfo.zip?raw=true)
-   * [Step 6 - Extra Credit.zip](https://github.com/adlnet/xapi-bootcamp-2015/blob/master/Day%20One%20workshops/Starting%20from%20SCORM%20-%20A%20Developer's%20Guide/Steps/Step%206%20-%20Extra%20Credit.zip?raw=true)
+   * [Step 4 - InitializingData.zip](https://github.com/adlnet/xapi-bootcamp-2015/blob/master/Day%20One%20workshops/Starting%20from%20SCORM%20-%20A%20Developer's%20Guide/Steps/Step%204%20-%20SetActivityIDs.zip?raw=true)
+   * [Step 5 - Extra Credit.zip](https://github.com/adlnet/xapi-bootcamp-2015/blob/master/Day%20One%20workshops/Starting%20from%20SCORM%20-%20A%20Developer's%20Guide/Steps/Step%206%20-%20Extra%20Credit.zip?raw=true)
 
 Extract “Step 1 - RosesOriginal.zip” to a local directory on your computer.  This will be our starting place for the hands-on workshop.  
 
 In the "Step 1 - RosesOriginal".zip" directory structure, examine the following files:
 
-   * imsmanifest.xml - to see the complete list of SCOs in the course
-   * Assessments/assess_q1.html - to see the typical SCORM calls made for questions in this course
-   * Introduction_To_Roses/Introduction.html - to see typical non-question content in this course
-   * PostTest/Posttest.html - to see the final assessment SCORM logic
-
-*Workshop Demonstration - SCORM Course in an LMS*
+  * imsmanifest.xml - to see the complete list of SCOs in the course
+  * Assessments/assess_q1.html - to see the typical SCORM calls made for questions in this course
+  * Introduction_To_Roses/Introduction.html - to see typical non-question content in this course
+  * PostTest/Posttest.html - to see the final assessment SCORM logic
 
 Note: If you have access to an LMS and would like to import your course steps into the LMS, please do so.  To import, zip up all course files (so that the imsmanifest.xml is at the root of the zip), and use your LMS import functionality to upload the course.  
-This is not required or needed to complete the workshop.
+*This is not required to complete the workshop but without an LMS, viewing the results of the conversion are not possible.*
+
+*Workshop Demonstration - Show the original SCORM Course running in an LMS and view SCORM results (and the lack of any xAPI statements in a statement viewer)*
 
 
-### Step 2 - Replacing and Adding Files
+### Step 2 - Replacing and Adding JavaScript Files Used for Communication
 ---
 In this step, we will add some resources and make simple changes to enable the tracking of many SCORM Data Model elements via the xAPI (in addition to the original SCORM tracking).
 
-Move the following files to the "/Shared/JavaScript" directory
+Move the following files listed below (downloaded as part of step #1) to the "/Shared/JavaScript" directory where you extracted "Step 1 - RosesOriginal.zip"
 
-[xapiwrapper.min.js](https://raw.githubusercontent.com/adlnet/xAPIWrapper/master/dist/xapiwrapper.min.js) - This file will be used to abstract the complexity of the xAPI web service components.
+  * xapiwrapper.min.js - This file will be used to abstract the complexity of the xAPI web service components.
+  * SCORMToXAPIFunctions.js - This file contains the functionality to convert SCORM data and behaviors to xAPI. 
+  * APIWrapper.js - This final implements the SCORM API functionality and is commonly used in SCORM courses.  Note that you will likely be replacing the existing file.  It is important to keep the name "APIWrapper.js".  If you are not using the "Roses" example and your course does not use the APIWrapper.js file, additional details will be included below to assist with a custom integration.
 
-[SCORMToXAPIFunctions.js](https://raw.githubusercontent.com/adlnet/xapi-bootcamp-2015/master/Day%20One%20workshops/Starting%20from%20SCORM%20-%20A%20Developer's%20Guide/Resources/SCORMToXAPIFunctions.js)  
+Next, we'll examine the SCORMToXAPIFunction.js to get an overview of some of the complexities abstracted by the file.
 
-[SCORM 2004 APIWrapper.js](https://raw.githubusercontent.com/adlnet/SCORM-to-xAPI-Wrapper/master/SCORM2004/APIWrapper.js) - Note that you will be replacing the existing file.  It is important to keep the name "APIWrapper.js"
-
-*Workshop Demonstration - No demonstration capable in this step*
+Finally, we'll examine the updated APIWrapper.js file to see how the conversion functions are integrated into the exising APIWrapper.js file.
 
 
 ### Step 3 - Update SCOs
 ---
-Next, add the following code in the &lt;head&gt; sections of each SCO in your course. SCO launch files can be identified by looking at the imsmanifest.xml file at the root of the SCORM package. Resource elements with adlcp:scormtype set to "sco" should contain the complete list of SCOs in the course. In this solution, each SCO will be an xAPI 'activity' with associated 'statements'. Paste the following code before the &lt;script&gt; tag that references the APIWrapper.js file.
+Next, add the following code in the &lt;head&gt; sections of each SCO in your course. SCO launch files can be identified by looking at the imsmanifest.xml file at the root of the SCORM package. Resource elements with adlcp:scormtype set to "sco" should contain the complete list of SCOs in the course. In this solution, each SCO will be an xAPI 'activity' with associated 'statements'. Paste the following code before the &lt;script&gt; tag that references the existing APIWrapper.js file.  This will include the basic xAPI functionality as well as the SCORM to xAPI conversion functions.
 
 ``` javascript
-<script type="text/javascript">
-  var activity = document.location.protocol + "//" + document.location.host + document.location.pathname;
-</script>
 <script type="text/javascript" src="../Shared/JavaScript/xapiwrapper.min.js"></script>
 <script type="text/javascript" src="../Shared/JavaScript/SCORMToXAPIFunctions.js"></script>
 ```
 
-  * Be sure that the path in the src attribute above points to the location of the minified xapiwrapper.min.js and SCORMToXAPIFunctions.js file. This location assumes that one directory up from the SCO location, that there is a Shared/JavaScript directory with your JavaScript files.
+*Be sure that the path in the src attribute above points to the location of the minified xapiwrapper.min.js and SCORMToXAPIFunctions.js file. This location assumes that one directory up from the SCO location, that there is a Shared/JavaScript directory with your JavaScript files.*
 
-The complete list of SCO launch files for this step (and the following) is included below:
+The complete list of Roses Course SCO launch files for this step is included below:
 
    * /Assessments/assess_q1.html
    * /Assessments/assess_q2.html
@@ -87,18 +85,50 @@ The complete list of SCO launch files for this step (and the following) is inclu
    * /Styles_Of_Floristry/Styles_Of_Floristry.html
    * /What_Is_A_Rose/What_Is_A_Rose.html
 
-*Workshop Demonstration - No demonstration capable in this step*
 
-### Step 4 - Set Activity IDs
----
-When using the code in Step 3 above, Activity IDs will be automatically generated based on the URL of the SCO. This may be LMS-dependent, so it is also possible to manually configure your activity URIs by changing a line of javascript code in each SCO. This will also ensure that your activity IRIs do not change when you import a new copy of the course or include the same course in an additional LMS. 
+### Step 4 - Initializing Data
+The demonstration requires initialization of xAPI-required configuration data in the Roses Course. For each SCO, the following information is required:
 
-To manually configure your activity URI's make the following update to the code above:
+  * LRS endpoint - The LRS location where data should be sent for each SCO 
+  * LRS user - The xAPI "authority" to be used when sending statements from the course.
+  * LRS password - The password associated with the LRS user authority.
+  * Course ID - The IRI of the entire course activity.  This will be used as context to group statements.
+  * LMS Home Page - The home page of the LMS hosting the course.  This will be used as part of the actor "account" object.
+  * SCORM Version - The conversion wrapper supports both SCORM Version 1.2 and SCORM 2004 but must be configured appropriately when instantiated.
+  * Activity ID - The IRI of the SCO activity.  This will be used as the object of most statements.
+  * Grouping Context Activity - A context activity, added to all statements, that can be used to identify a synchronous workshop involving this exercise
 
-``` javascript
-var activity = <manually configured URI goes here>;
+*Initializing Data Using imsmanifest.xml*
+
+In the imsmanifest.xml file, identify <item></item> tags associated with SCOs that are to be converted.  Create a json object like the example below that includes configuration values of the items in the list above.  Include this object in the <adlcp:dataFromLMS></adlcp:dataFromLMS> element for the items that reference SCOs.  The dataFromLMS tag value is used to initialize the cmi.launch_data SCORM Data Model element and can be used at run-time to set the necessary xAPI configuration values.  The following is an example JSON configuration object:
+
+``` json
+    {
+      "lrs":{
+         "endpoint":"https://lrs.adlnet.gov/xapi/",
+         "user":"xapi-workshop",
+         "password":"password1234"
+      },
+      "courseId":"http://adlnet.gov/courses/roses",
+      "lmsHomePage":"http://lms.adlnet.gov",
+      "isScorm2004":true,
+      "activityId":"http://adlnet.gov/courses/roses/posttest",
+      "groupingContextActivity":{
+         "definition": {
+            "name": {
+                "en-US": "My Workshop"
+            },
+            "description": {
+                "en-US": "My Workshop happening in Nov"
+            }
+        },
+        "id": "http://adlnet.gov/event/xapiworkshop/myworkshop",
+        "objectType": "Activity"
+     }
+   } 
 ```
-Add the appropriate identifier in each SCO.  The following list provides sample activity IDs that can be used for this exercise:
+
+Remember that the "activityId" should change each time this object is used to identify a unique activity.  For the purposes of the Roses course, the following list provides the activity IDs that should be used for this exercise:
 
    * "http://adlnet.gov/courses/roses/q1"
    * "http://adlnet.gov/courses/roses/q2"
@@ -114,27 +144,11 @@ Add the appropriate identifier in each SCO.  The following list provides sample 
    * "http://adlnet.gov/courses/roses/styles"
    * "http://adlnet.gov/courses/roses/what"
 
-*Workshop Demonstration - No demonstration capable in this step*
+For information on the imsmanifest.xml file, <item></item> tags and <adlcp:dataFromLMS></adlcp:dataFromLMS>, see the [SCORM on ADLNet.gov](https://www.adlnet.gov/adl-research/scorm/). 
 
-### Step 5 - Configure LRS Information
----
-Several configuration values must be set in the updated APIWrapper.js file.  In order for the wrapper to communicate to an LRS and include relevent contextual information, the LRS information, course identifier and LMS home page are required. In "doInitialize()" method in APIWrapper.js (in the /Shared/JavaScript directory), configure the following lines of code as indicated below:
+*If you already use <adlcp:dataFromLMS></adlcp:dataFromLMS> and the cmi.launch_data element, please be sure to modify this approach to handle your existing data AND the JSON object*
 
-``` javascript
-// xAPI Extension
-  var config = {
-      lrs:{
-         endpoint:"https://lrs.adlnet.gov/xapi/",
-         user:"adlbootcamp",
-         password:"1234"
-      },
-      courseId:"http://adlnet.gov/courses/roses",
-      lmsHomePage:"http://www.mylms.com",
-      isScorm2004:true
-  };
-```
-
-Also, in order to distinguish this course from the original, change the course title in the imsmanifest.xml file at the root of the course.  The code snippet below illustrates the required change:
+In addition, In order to distinguish this course from the original, change the course title in the imsmanifest.xml file at the root of the course.  The code snippet below illustrates the required change:
 
 ``` xml
 ...
@@ -150,8 +164,8 @@ Now the course can be imported into your LMS and used to track a subset of SCORM
 
 *Workshop Demonstration - SCORM Course, with added xAPI tracking, in an LMS*
 
-### Extra Credit
-Now that the course is updated to track to an LRS, you can access data historically not available to a SCORM SCO.  For example, you can get all of the scores associated with the post test and show the learner's score vs. the average of the class. 
+### Step 5 - Extra Credit
+Now that the course is updated to track SCORM data to an LRS, you can access data historically not available to a SCORM SCO.  For example, you can get all of the scores associated with the post test and show the learner's score vs. the average of the class. 
 
 In the SCORM to xAPI functions file (/Shared/JavaScript/SCORMToXAPIFunctions.js), add a function to get ALL statements from the LRS based on search/query parameters.  The complete function is listed below.
 
@@ -182,8 +196,6 @@ Then add a function that returns a custom score object that contains data about 
 // extra credit extension
 var getScoreData = function()
 {
-   console.log("getScoreData");
-
    // Set up object for score data
    var scoreStructure = new Object();
    scoreStructure.totalNumberOfScores = 0;
@@ -192,7 +204,7 @@ var getScoreData = function()
 
 
    var search = ADL.XAPIWrapper.searchParams();
-   search['activity'] = activity;
+   search['activity'] = config.activityId;
    search['verb'] = ADL.verbs.scored.id;
 
    var statements = GetCompleteStatementListFromLRS(search);
@@ -217,17 +229,17 @@ Next update the object return value to include the new public function.  Look fo
 
 ``` javascript
 ...
-return{setConfig:setConfig,
-      initializeAttempt:initializeAttempt,
-      resumeAttempt:resumeAttempt,
-      suspendAttempt:suspendAttempt,
-      terminateAttempt:terminateAttempt,
-      saveDataValue:saveDataValue,
-      setScore:setScore,
-      setComplete:setComplete,
-      setSuccess:setSuccess,
-      configureLRS:configureLRS,
-      getScoreData:getScoreData 
+return{
+        initializeAttempt: initializeAttempt,
+        resumeAttempt: resumeAttempt,
+       suspendAttempt: suspendAttempt,
+       terminateAttempt: terminateAttempt,
+       saveDataValue: saveDataValue,
+       setScore: setScore,
+       setComplete: setComplete,
+       setSuccess: setSuccess,
+       configureLRS: configureLRS,
+       getScoreData:getScoreData
       }
 ...
 ```
@@ -259,7 +271,5 @@ Finally, report the data by updating the post test (/PostTest/Posttest.html) to 
 
 ### A Note About Context
 The SCORMToXAPIFunction.js file used as part of this example contains additional context activities.  This additional context is used for dashboard & reporting session later today.  
-
-**To use this approach outside of this tutorial, do not use the SCORMToXAPIFunctions.js file used in this workshop.  Please download the basic SCORMToXAPIFunctions.js file located in the SCORM-to-xAPI [SCORM 1.2](https://github.com/adlnet/SCORM-to-xAPI-Wrapper/tree/master/SCORM1.2) or [SCORM 2004](https://github.com/adlnet/SCORM-to-xAPI-Wrapper/tree/master/SCORM2004) directories.**
 
 
