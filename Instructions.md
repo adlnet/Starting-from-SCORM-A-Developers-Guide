@@ -22,11 +22,8 @@ Get the required resources:
    * [(SCORM 2004) APIWrapper.js](https://raw.githubusercontent.com/adlnet/SCORM-to-xAPI-Wrapper/master/SCORM2004/APIWrapper.js) - The new SCORM Wrapper containing integration points for the conversion code
    * [SCORMToXAPIFunctions.js](https://github.com/adlnet/SCORM-to-xAPI-Wrapper/blob/master/SCORMToXAPIFunctions.js) - Contains all of the code required to map SCORM data model elements to xAPI statements
    * [xapiwrapper.min.js](https://raw.githubusercontent.com/adlnet/xAPIWrapper/master/dist/xapiwrapper.min.js) - Obscures complexities of the xAPI and includes the ADL core verbs
-   * [Step 1 - RosesOriginal.zip](https://github.com/adlnet/Starting-from-SCORM-A-Developers-Guide/blob/master/Steps/Step%201%20-%20RosesOriginal.zip?raw=true)
-   * [Step 2 - ReplacingAndAddingFiles.zip](https://github.com/adlnet/Starting-from-SCORM-A-Developers-Guide/blob/master/Steps/Step%202%20-%20ReplacingAndAddingFiles.zip?raw=true)
-   * [Step 3 - UpdateSCOs.zip](https://github.com/adlnet/Starting-from-SCORM-A-Developers-Guide/blob/master/Steps/Step%203%20-%20UpdateSCOs.zip?raw=true)
-   * [Step 4 - InitializingData.zip](https://github.com/adlnet/Starting-from-SCORM-A-Developers-Guide/blob/master/Steps/Step%204%20-%20InitializingData.zip?raw=true)
-   * [Step 5 - ExtraCredit.zip](https://github.com/adlnet/Starting-from-SCORM-A-Developers-Guide/blob/master/Steps/Step%205%20-%20ExtraCredit.zip?raw=true)
+   * [RosesOriginal.zip](https://github.com/adlnet/Starting-from-SCORM-A-Developers-Guide/blob/master/Steps/Step%201%20-%20RosesOriginal.zip?raw=true)
+   * [RosesFinal.zip](https://github.com/adlnet/Starting-from-SCORM-A-Developers-Guide/blob/master/Steps/Step%205%20-%RosesFinal.zip?raw=true) - This is course with the changes already completed.  
 
 Extract “Step 1 - RosesOriginal.zip” to a local directory on your computer.  This will be our starting place for the hands-on workshop.  
 
@@ -154,7 +151,7 @@ In addition, In order to distinguish this course from the original, change the c
 ...
 <organizations default="ORG-35C6AD226A6FC7DB47BE726A01167EBF">
     <organization identifier="ORG-35C6AD226A6FC7DB47BE726A01167EBF" structure="hierarchical">
-      <title>Roses 101 - xAPI-Converted</title>
+      <title>Roses 101 SCORM 2004 - xAPI-Converted Version</title>
       <item identifier="ITEM-5E9AC1DCB6A0F867E6197B8CDB8948C5" isvisible="true">
         <title>Module1</title>
 ...
@@ -250,7 +247,7 @@ Also, in order to distinguish this course from the original, change the course t
 ...
 <organizations default="ORG-35C6AD226A6FC7DB47BE726A01167EBF">
     <organization identifier="ORG-35C6AD226A6FC7DB47BE726A01167EBF" structure="hierarchical">
-      <title>Roses 101 - xAPI-Converted - Extra Credit</title>
+      <title>Roses 101 SCORM 2004 - xAPI-Converted Version - Extra Credit</title>
       <item identifier="ITEM-5E9AC1DCB6A0F867E6197B8CDB8948C5" isvisible="true">
         <title>Module1</title>
 ...
