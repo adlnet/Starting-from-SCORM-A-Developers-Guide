@@ -21,7 +21,7 @@ In this step, we’ll examine the SCORM course to be used during this workshop a
 Get the required resources:
    
    * [RosesOriginal.zip](https://github.com/adlnet/Starting-from-SCORM-A-Developers-Guide/blob/master/Steps/RosesOriginal.zip?raw=true)
-   * [RosesFinal.zip](https://github.com/adlnet/Starting-from-SCORM-A-Developers-Guide/blob/master/Steps/RosesFinal.zip?raw=true) - This is course with the changes already completed.  
+   * [RosesFinal.zip](https://github.com/adlnet/Starting-from-SCORM-A-Developers-Guide/blob/master/Steps/RosesFinal.zip?raw=true) - This is the course with the changes already completed.  
 
 Extract “RosesOriginal.zip” to a local directory on your computer.  This will be our starting place for the hands-on workshop.  
 
