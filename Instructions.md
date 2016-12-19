@@ -41,7 +41,7 @@ Note: If you have access to an LMS and would like to import your course steps in
 *Workshop Demonstration - Show the original SCORM Course running in an LMS and view SCORM results (and the lack of any xAPI statements in a statement viewer)*
 
 
-### Step 2 - Replacing and Adding JavaScript Files Used for Communication
+### Step 2 - Examining JavaScript Files Used for Communication
 ---
 In this step, we will add some resources and make simple changes to enable the tracking of many SCORM Data Model elements via the xAPI (in addition to the original SCORM tracking).
 
