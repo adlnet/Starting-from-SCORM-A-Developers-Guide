@@ -19,21 +19,22 @@ This example uses the [xAPI SCORM Profile](https://github.com/adlnet/xAPI-SCORM-
 In this step, we’ll examine the SCORM course to be used during this workshop and look at several resources that will be used in this demonstration.
 
 Get the required resources:
-   * [(SCORM 2004) APIWrapper.js](https://raw.githubusercontent.com/adlnet/SCORM-to-xAPI-Wrapper/master/SCORM2004/APIWrapper.js) - The new SCORM Wrapper containing integration points for the conversion code
-   * [SCORMToXAPIFunctions.js](https://github.com/adlnet/SCORM-to-xAPI-Wrapper/blob/master/SCORMToXAPIFunctions.js) - Contains all of the code required to map SCORM data model elements to xAPI statements
-   * [xapiwrapper.min.js](https://raw.githubusercontent.com/adlnet/xAPIWrapper/master/dist/xapiwrapper.min.js) - Obscures complexities of the xAPI and includes the ADL core verbs
-   * [RosesOriginal.zip](https://github.com/adlnet/Starting-from-SCORM-A-Developers-Guide/blob/master/Steps/Step%201%20-%20RosesOriginal.zip?raw=true)
-   * [RosesFinal.zip](https://github.com/adlnet/Starting-from-SCORM-A-Developers-Guide/blob/master/Steps/Step%205%20-%RosesFinal.zip?raw=true) - This is course with the changes already completed.  
+   
+   * [RosesOriginal.zip](https://github.com/adlnet/Starting-from-SCORM-A-Developers-Guide/blob/master/Steps/RosesOriginal.zip?raw=true)
+   * [RosesFinal.zip](https://github.com/adlnet/Starting-from-SCORM-A-Developers-Guide/blob/master/Steps/RosesFinal.zip?raw=true) - This is course with the changes already completed.  
 
-Extract “Step 1 - RosesOriginal.zip” to a local directory on your computer.  This will be our starting place for the hands-on workshop.  
+Extract “RosesOriginal.zip” to a local directory on your computer.  This will be our starting place for the hands-on workshop.  
 
-In the "Step 1 - RosesOriginal".zip" directory structure, examine the following files:
+In the "RosesOriginal".zip" directory structure, examine the following files:
 
   * imsmanifest.xml - to see the complete list of SCOs in the course
   * Assessments/assess_q1.html - to see the typical SCORM calls made for questions in this course
   * Introduction_To_Roses/Introduction.html - to see typical non-question content in this course
   * PostTest/Posttest.html - to see the final assessment SCORM logic
-
+  * [(SCORM 2004) APIWrapper.js](https://raw.githubusercontent.com/adlnet/SCORM-to-xAPI-Wrapper/master/SCORM2004/APIWrapper.js) - The new SCORM Wrapper containing integration points for the conversion code
+  * [SCORMToXAPIFunctions.js](https://github.com/adlnet/SCORM-to-xAPI-Wrapper/blob/master/SCORMToXAPIFunctions.js) - Contains all of the code required to map SCORM data model elements to xAPI statements
+  * [xapiwrapper.min.js](https://raw.githubusercontent.com/adlnet/xAPIWrapper/master/dist/xapiwrapper.min.js) - Obscures complexities of the xAPI and includes the ADL core verbs
+  
 Note: If you have access to an LMS and would like to import your course steps into the LMS, please do so.  To import, zip up all course files (so that the imsmanifest.xml is at the root of the zip), and use your LMS import functionality to upload the course.  
 *This is not required to complete the workshop but without an LMS, viewing the results of the conversion are not possible.*
 
@@ -44,7 +45,7 @@ Note: If you have access to an LMS and would like to import your course steps in
 ---
 In this step, we will add some resources and make simple changes to enable the tracking of many SCORM Data Model elements via the xAPI (in addition to the original SCORM tracking).
 
-Move the following files listed below (downloaded as part of step #1) to the "/Shared/JavaScript" directory where you extracted "Step 1 - RosesOriginal.zip"
+Verify the following files listed below are in the "/Shared/JavaScript" directory where you extracted "RosesOriginal.zip"
 
   * xapiwrapper.min.js - This file will be used to abstract the complexity of the xAPI web service components.
   * SCORMToXAPIFunctions.js - This file contains the functionality to convert SCORM data and behaviors to xAPI. 
