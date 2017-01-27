@@ -271,3 +271,5 @@ Finally, report the data by updating the post test (/PostTest/Posttest.html) to 
 The SCORMToXAPIFunction.js file used as part of this example contains additional context activities.  This additional context is used for dashboard & reporting session later today.  
 
 
+### View your results with dashboard
+By visiting our SCORM chart [page](https://creighton.github.io/itsec2014charts/coursechart.html), you can view learners' activity for this updated course. The LRS Data tab at the top will query the ADL LRS for all statements pertaining to this course so you can view activity attempts and scores per learner. You can also visit our job aid [page](https://creighton.github.io/itsec2014charts/jobaidchart.html) which records learners' activity from our xAPI-enabled Android [app](https://play.google.com/store/apps/details?id=org.adl.roses&hl=en). The code for it is available [here](https://github.com/adlnet/xAPI-Android-Roses).
